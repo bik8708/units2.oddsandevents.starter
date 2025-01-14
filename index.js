@@ -71,6 +71,7 @@ const sortAllButton = document.querySelector("#sortAll");
 sortAllButton.addEventListener("click", (event) => {
   for (let i = 0; i < state.numberBank.length; i++) {
     const currentNumber = state.numberBank[i];
+    // for (const currentNumber of state.numberBank.length)
     if (currentNumber % 2 === 0) {
       state.evens.push(currentNumber);
     } else {
@@ -81,8 +82,6 @@ sortAllButton.addEventListener("click", (event) => {
   state.numberBank = [];
   render();
 });
-
-//note to self: for (const currentNumber of state.numberBank.length)
 
 // Initial render
 render();
